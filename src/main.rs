@@ -15,6 +15,6 @@ fn select_word() -> String {
     file.read_to_string(&mut file_contents)
         .expect("an error occurred while reading file!");
 
-
-
+    /* Get individual words */
+    let available_words: Vec<&str> = file_contents.trim().split(",").collect();
 }
