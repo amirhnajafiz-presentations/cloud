@@ -9,6 +9,8 @@ use std::io::prelude::*;
 
 fn main() {
     let selected_word = select_word();
+
+    println!("{}", selected_word);
 }
 
 fn select_word() -> String {
@@ -24,4 +26,7 @@ fn select_word() -> String {
     let available_words: Vec<&str> = file_contents.trim().split(",").collect();
 
     /* Generating random index */
+    let random_index = rand::thread_rng().gen_range(0, available_words.len());
+
+    return String::from(available_words[random_index]);
 }
