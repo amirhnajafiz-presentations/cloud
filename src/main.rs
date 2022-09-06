@@ -1,3 +1,8 @@
+extern crate rand;
+
+// using rand library
+use rand::Rng;
+
 // importing file and io libraries
 use std::fs::File;
 use std::io::prelude::*;
@@ -17,4 +22,6 @@ fn select_word() -> String {
 
     /* Get individual words */
     let available_words: Vec<&str> = file_contents.trim().split(",").collect();
+
+    /* Generating random index */
 }
