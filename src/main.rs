@@ -36,5 +36,7 @@ fn select_word() -> String {
 }
 
 fn create_letters(word: &String) -> Vec<Letter> {
+    let mut letters: Vec<Letter> = Vec::new();
 
+    return letters;
 }
