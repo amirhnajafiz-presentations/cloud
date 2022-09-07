@@ -34,3 +34,7 @@ fn select_word() -> String {
 
     return String::from(available_words[random_index]);
 }
+
+fn create_letters(word: &String) -> Vec<Letter> {
+
+}
