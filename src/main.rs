@@ -1,19 +1,17 @@
 extern crate rand;
 
+use rand::{Rng, thread_rng};
+use std::fs::File;
+use std::io::prelude::*;
+use std::io;
+
+
 include!("letter/letter.rs");
 include!("game/enum.rs");
 include!("game/game.rs");
 include!("utils/file.rs");
 include!("utils/input.rs");
 
-// using rand library
-use rand::{Rng, thread_rng};
-
-// importing file and io libraries
-use std::fs::File;
-use std::io::prelude::*;
-
-use std::io;
 
 const ALLOWED_ATTEMPTS: u8 = 5;
 
@@ -26,12 +24,12 @@ fn main() {
 
     loop {
         println!("\nYou have {} turns left.", turns_left);
+
         display_progress(&letters);
 
-
         println!("\nPlease enter a letter to guess:");
-        let user_char = read_user_input_character();
 
+        let user_char = read_user_input_character();
         if user_char == '*' {
             break;
         }
