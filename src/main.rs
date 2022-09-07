@@ -7,6 +7,8 @@ use rand::Rng;
 use std::fs::File;
 use std::io::prelude::*;
 
+use std::io;
+
 const ALLOWED_ATTEMPTS: u8 = 5;
 
 struct Letter {
@@ -24,6 +26,8 @@ fn main() {
         display_progress(&letters);
 
 
+        println!("Please enter a letter to guess:");
+        let user_char = read_user_input_character();
     }
 
     println!("Selected word was {}", selected_word);
@@ -78,4 +82,18 @@ fn display_progress(letters: &Vec<Letter>) {
     }
 
     println!("{}", display_string);
+}
+
+fn read_user_input_character() -> char {
+    let mut user_input = String::new();
+
+    return match io::stdin().read_line(&mut user_input) {
+        Ok(_) => {
+            match user_input.chars().next() {
+                Some(c) => { c }
+                None => { '*' }
+            }
+        }
+        Err(_) => { '*' }
+    }
 }
