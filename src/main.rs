@@ -7,16 +7,26 @@ use rand::Rng;
 use std::fs::File;
 use std::io::prelude::*;
 
+const ALLOWED_ATTEMPTS: u8 = 5;
+
 struct Letter {
     character: char,
     revealed: bool,
 }
 
 fn main() {
+    let mut turns_left = ALLOWED_ATTEMPTS;
     let selected_word = select_word();
     let mut letters = create_letters(&selected_word);
 
-    display_progress(&letters);
+    loop {
+        println!("You have {} turns left.", turns_left);
+        display_progress(&letters);
+
+
+    }
+
+    println!("Selected word was {}", selected_word);
 }
 
 fn select_word() -> String {
