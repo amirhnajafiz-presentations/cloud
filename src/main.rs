@@ -1,7 +1,7 @@
 extern crate rand;
 
 // using rand library
-use rand::Rng;
+use rand::{Rng, thread_rng};
 
 // importing file and io libraries
 use std::fs::File;
@@ -28,12 +28,14 @@ fn main() {
     let selected_word = select_word();
     let mut letters = create_letters(&selected_word);
 
+    println!("Welcome to Hangman!");
+
     loop {
-        println!("You have {} turns left.", turns_left);
+        println!("\nYou have {} turns left.", turns_left);
         display_progress(&letters);
 
 
-        println!("Please enter a letter to guess:");
+        println!("\nPlease enter a letter to guess:");
         let user_char = read_user_input_character();
 
         if user_char == '*' {
@@ -51,9 +53,21 @@ fn main() {
         if !at_least_on_revealed {
             turns_left -= 1;
         }
+
+        match check_progress(turns_left, &letters) {
+            GameProgress::InProgress => continue,
+            GameProgress::Won => {
+                println!("\nCongrats, you won! The word was {}", selected_word);
+                break;
+            }
+            GameProgress::Lost => {
+                println!("\nSorry, you lost!");
+                break;
+            }
+        }
     }
 
-    println!("Selected word was {}", selected_word);
+    println!("\nGoodbye!");
 }
 
 fn select_word() -> String {
@@ -122,5 +136,22 @@ fn read_user_input_character() -> char {
 }
 
 fn check_progress(turns_left: u8, letters: &Vec<Letter>) -> GameProgress {
-    return GameProgress::Won;
+    let mut all_revealed = true;
+    for letter in letters {
+        if !letter.revealed {
+            all_revealed = false;
+
+            break;
+        }
+    }
+
+    if all_revealed {
+        return GameProgress::Won;
+    }
+
+    if turns_left > 0 {
+        return GameProgress::InProgress;
+    }
+
+    return GameProgress::Lost;
 }
