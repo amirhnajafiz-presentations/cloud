@@ -1,6 +1,7 @@
 extern crate rand;
 
 include!("letter/letter.rs");
+include!("game/enum.rs");
 
 // using rand library
 use rand::{Rng, thread_rng};
@@ -12,12 +13,6 @@ use std::io::prelude::*;
 use std::io;
 
 const ALLOWED_ATTEMPTS: u8 = 5;
-
-enum GameProgress {
-    InProgress,
-    Won,
-    Lost
-}
 
 fn main() {
     let mut turns_left = ALLOWED_ATTEMPTS;
