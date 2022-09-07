@@ -1,5 +1,7 @@
 extern crate rand;
 
+include!("letter/letter.rs");
+
 // using rand library
 use rand::{Rng, thread_rng};
 
@@ -10,11 +12,6 @@ use std::io::prelude::*;
 use std::io;
 
 const ALLOWED_ATTEMPTS: u8 = 5;
-
-struct Letter {
-    character: char,
-    revealed: bool,
-}
 
 enum GameProgress {
     InProgress,
@@ -82,7 +79,7 @@ fn select_word() -> String {
     let available_words: Vec<&str> = file_contents.trim().split(",").collect();
 
     /* Generating random index */
-    let random_index = rand::thread_rng().gen_range(0, available_words.len());
+    let random_index = thread_rng().gen_range(0, available_words.len());
 
     return String::from(available_words[random_index]);
 }
