@@ -5,7 +5,6 @@ use rand::{Rng, thread_rng};
 
 // importing file and io libraries
 use std::fs::File;
-use std::intrinsics::fabsf32;
 use std::io::prelude::*;
 
 use std::io;
