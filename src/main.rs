@@ -5,6 +5,7 @@ use rand::Rng;
 
 // importing file and io libraries
 use std::fs::File;
+use std::intrinsics::fabsf32;
 use std::io::prelude::*;
 
 use std::io;
@@ -28,6 +29,22 @@ fn main() {
 
         println!("Please enter a letter to guess:");
         let user_char = read_user_input_character();
+
+        if user_char == '*' {
+            break;
+        }
+
+        let mut at_least_on_revealed = false;
+        for letter in letters.iter_mut() {
+            if letter.character == user_char {
+                letter.revealed = true;
+                at_least_on_revealed = true;
+            }
+        }
+
+        if !at_least_on_revealed {
+            turns_left -= 1;
+        }
     }
 
     println!("Selected word was {}", selected_word);
