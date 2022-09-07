@@ -50,3 +50,22 @@ fn create_letters(word: &String) -> Vec<Letter> {
 
     return letters;
 }
+
+fn display_progress(letters: &Vec<Letter>) {
+    let mut display_string = String::from("Progress:");
+
+    /* Display appropriate character */
+    for letter in letters {
+        display_string.push(' ');
+
+        if letter.revealed {
+            display_string.push(letter.character);
+        } else {
+            display_string.push('_');
+        }
+
+        display_string.push(' ');
+    }
+
+    println!("{}", display_string);
+}
