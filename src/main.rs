@@ -17,6 +17,12 @@ struct Letter {
     revealed: bool,
 }
 
+enum GameProgress {
+    InProgress,
+    Won,
+    Lost
+}
+
 fn main() {
     let mut turns_left = ALLOWED_ATTEMPTS;
     let selected_word = select_word();
@@ -113,4 +119,8 @@ fn read_user_input_character() -> char {
         }
         Err(_) => { '*' }
     }
+}
+
+fn check_progress(turns_left: u8, letters: &Vec<Letter>) -> GameProgress {
+    return GameProgress::Won;
 }
