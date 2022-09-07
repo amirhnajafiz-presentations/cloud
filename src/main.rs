@@ -15,6 +15,8 @@ struct Letter {
 fn main() {
     let selected_word = select_word();
     let mut letters = create_letters(&selected_word);
+
+    display_progress(&letters);
 }
 
 fn select_word() -> String {
@@ -37,6 +39,14 @@ fn select_word() -> String {
 
 fn create_letters(word: &String) -> Vec<Letter> {
     let mut letters: Vec<Letter> = Vec::new();
+
+    /* Wrap each character in a letter struct */
+    for c in word.chars() {
+        letters.push(Letter {
+            character: c,
+            revealed: false
+        });
+    }
 
     return letters;
 }
