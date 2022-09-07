@@ -7,10 +7,14 @@ use rand::Rng;
 use std::fs::File;
 use std::io::prelude::*;
 
+struct Letter {
+    character: char,
+    revealed: bool,
+}
+
 fn main() {
     let selected_word = select_word();
-
-    println!("{}", selected_word);
+    let mut letters = create_letters(&selected_word);
 }
 
 fn select_word() -> String {
