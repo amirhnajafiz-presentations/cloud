@@ -1,1 +1,0 @@
-amir,hossein,github,awesome,rustlang,howudoin,highway
