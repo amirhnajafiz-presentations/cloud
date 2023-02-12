@@ -71,6 +71,32 @@ The term "cloud services" refers to a wide range of services delivered on demand
 
 <br />
 
+## Cloud Service Providers
+
+As a whole, the top 10 cloud service providers globally in 2023 
+are Amazon Web Services (AWS), Microsoft Azure, 
+Google Cloud Platform (GCP), Alibaba Cloud, Oracle Cloud, 
+IBM Cloud (Kyndryl), Tencent Cloud, OVHcloud, DigitalOcean, 
+and Linode (owned by Akamai).
+
+### Data Center
+
+Each service provider may provide or use a data center.
+A data center is a physical location that stores computing machines and their related hardware equipment. 
+It contains the computing infrastructure that IT systems require, such as servers, data 
+storage drives, and network equipment. It is the physical facility that stores any company's digital data.
+
+- NTT Communications
+- Telehouse/KDDI
+- Coresite
+- Verizon
+- Cyxtera Technologies
+- China Unicom
+- Amazon Web Services
+- 365 Data Centers
+
+<br />
+
 ## Example
 
 Now, let's get our hands dirty. We are going to visit
