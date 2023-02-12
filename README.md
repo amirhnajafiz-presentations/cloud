@@ -25,6 +25,11 @@ Simply put, cloud computing is the delivery of computing services—including se
     <img src="assets/cc.png" alt="cloud computing" width="300" />
 </div>
 
+### Why do we need this?
+
+Cloud Computing offers resilient computing, fast and effective virtualization, provides you low-cost software, offers advanced online security.
+In simple words, it’s make the life easier.
+
 <br />
 
 ## What are Cloud Services?
