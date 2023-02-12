@@ -68,9 +68,9 @@ The term "cloud services" refers to a wide range of services delivered on demand
 
 ## Example
 
-Now, let's get our hands dirty. We are going inside
+Now, let's get our hands dirty. We are going to visit
 Abrarvan to create a new VM and make a SSH connection to
-our VM.
+our VM and check it.
 
 <br />
 
