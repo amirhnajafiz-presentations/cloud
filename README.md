@@ -51,3 +51,19 @@ The term "cloud services" refers to a wide range of services delivered on demand
 - Digital Ocean
 - Microsoft Azure
 - Abrarvan
+
+<br />
+
+## Example
+
+Now, let's get our hands dirty. We are going inside
+Abrarvan to create a new VM and make a SSH connection to
+our VM.
+
+<br />
+
+## Resources
+
+- [https://edu.gcfgloabl.org](https://edu.gcfglobal.org/en/computerbasics/understanding-the-cloud/1/#:~:text=But%20what%20exactly%20is%20the,of%20your%20computer's%20hard%20drive.)
+- [https://aws.com](https://aws.amazon.com/)
+- [https://arvancloud.ir](https://www.arvancloud.ir/en)
