@@ -21,6 +21,12 @@ Simply put, cloud computing is the delivery of computing services—including se
 
 <br />
 
+<div align="center">
+    <img src="assets/cc.png" alt="cloud computing" width="300" />
+</div>
+
+<br />
+
 ## What are Cloud Services?
 
 The term "cloud services" refers to a wide range of services delivered on demand to companies and customers over the internet. These services are designed to provide easy, affordable access to applications and resources, without the need for internal infrastructure or hardware.
@@ -51,6 +57,12 @@ The term "cloud services" refers to a wide range of services delivered on demand
 - Digital Ocean
 - Microsoft Azure
 - Abrarvan
+
+<br />
+
+<div align="center">
+    <img src="assets/cloud.png" width="400" alt="cloud computing types" />
+</div>
 
 <br />
 
