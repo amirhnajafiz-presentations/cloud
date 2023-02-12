@@ -30,3 +30,24 @@ The term "cloud services" refers to a wide range of services delivered on demand
 - Infrastructure as a Service (IaaS)
 - Platform as a Service (PaaS)
 - Software as a Service (SaaS)
+
+### SaaS
+
+- Google Docs
+- Google Maps
+- Trello
+- Netflix
+
+### PaaS
+
+- Google Colab
+- Heroku
+- AWS Elastic Beanstalk
+- OpenShift
+
+### IaaS
+
+- AWS
+- Digital Ocean
+- Microsoft Azure
+- Abrarvan
